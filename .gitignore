@@ -1,0 +1,136 @@
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log/OS Files
+*.log
+
+# Android Studio generated files and folders
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+output-metadata.json
+
+# IntelliJ
+*.iml
+.idea/
+misc.xml
+deploymentTargetDropDown.xml
+render.experimental.xml
+
+# Keystore files
+*.jks
+*.keystore
+signingKey
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
+/.kotlin/
+
+# macOS
+.DS_Store
+
+# iOS/Xcode
+## Build generated
+ios-app/build/
+ios-app/DerivedData/
+
+## Various settings
+ios-app/*.pbxuser
+ios-app/!default.pbxuser
+ios-app/*.mode1v3
+ios-app/!default.mode1v3
+ios-app/*.mode2v3
+ios-app/!default.mode2v3
+ios-app/*.perspectivev3
+ios-app/!default.perspectivev3
+ios-app/xcuserdata/
+ios-app/*.moved-aside
+ios-app/*.xccheckout
+ios-app/*.xcscmblueprint
+
+## Obj-C/Swift specific
+ios-app/*.hmap
+ios-app/*.ipa
+ios-app/*.dSYM.zip
+ios-app/*.dSYM
+
+## CocoaPods
+ios-app/Pods/
+ios-app/Podfile.lock
+
+## Swift Package Manager
+ios-app/.swiftpm/
+ios-app/Package.resolved
+
+## Xcode Patch
+ios-app/*.xcodeproj/*
+!ios-app/*.xcodeproj/project.pbxproj
+!ios-app/*.xcodeproj/xcshareddata/
+!ios-app/*.xcodeproj/project.xcworkspace/
+ios-app/*.xcodeproj/project.xcworkspace/*
+!ios-app/*.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+## Xcode Workspace
+ios-app/*.xcworkspace/xcuserdata/
+
+# Kotlin Native
+.konan/
+/ios-app/GoogleService-Info.plist
+
+# Claude Code (로컬 설정 및 시크릿: Firebase admin 키 등)
+.claude/
+scripts/.env
+
+# ── 로컬 산출물·캐시·백업 (실제 사용 데이터만 추적) ──
+
+# Python 캐시 / 가상환경
+__pycache__/
+*.pyc
+.venv/
+
+# 데이터 백업·중간 산출물
+*.bak
+*.bak2
+
+# 생성 파이프라인 작업 산출물 (스크립트로 재생성 가능)
+scripts/batches/
+scripts/fix_batches/
+scripts/highlight_batches/
+scripts/output/
+scripts/fix_output/
+scripts/audit_input/
+scripts/pos_input/
+scripts/meaning_gen/review_chunks/
+scripts/highlight_results_n*.json
+scripts/highlight_unmatched_n*.jsonl
+scripts/meaning_gen/highlight_unmatched.tsv
+
+# OMC / Superpowers 로컬 도구 산출물
+.omc/
+docs/superpowers/
+.superpowers/
+
+# ── 공개 미러: 콘텐츠 데이터·로컬 설정 재유입 방지 ──
+
+# Firebase 설정 (값을 비운 *.example 만 추적)
+ios-app/ios-app/GoogleService-Info.plist
+
+# 콘텐츠 데이터 (단어·뜻·예문·후리가나·한자) — 미러에는 포함하지 않는다
+*.db
+*.tsv
+scripts/final/
+scripts/meaning_gen/
+scripts/checkpoint/
+docs/kanji_list*.txt
+
+# 로컬 서명 설정 · Xcode 사용자 상태
+signing.properties
+.swiftpm/

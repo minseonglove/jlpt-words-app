@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package com.minseonglove.jlptwords.proto;
+
+message ProtoExampleToken {
+    string surface = 1;
+    string reading = 2;
+    string meaning = 3;
+}
+
+message ProtoExample {
+    string japanese = 1;
+    string korean = 2;
+    repeated ProtoExampleToken tokens = 3;
+    repeated ProtoRuby furigana = 4;
+}
+
+// 예문 루비 세그먼트. isHighlight 는 저장하지 않는다 — 복원 시 japanese 의 `*` 마커로부터
+// buildRubySegments 가 재계산한다(FuriganaCodec.DecodedRuby 와 동일한 구조).
+message ProtoRuby {
+    string text = 1;
+    string reading = 2;
+}
+
+message ProtoWord {
+    int32 id = 1;
+    string kanji = 2;
+    string pronunciation = 3;
+    string meaning = 4;
+    int32 appearanceCount = 5;
+    int32 correctCount = 6;
+    string partOfSpeech = 7;
+    repeated ProtoExample examples = 8;
+}
+
+message ProtoStudyStatus {
+    // 저장 포맷 세대. 0 = 1.0.0(디자인 개편 전) 저장분으로, 단어에 예문·품사가 없어 복원해도
+    // 학습 카드의 예문이 비어 버린다. 세대가 다르면 복원하지 않고 폐기한다.
+    int32 schemaVersion = 13;
+    int32 sessionId = 1;
+    int32 sessionPosition = 2;
+    int32 levelCode = 3;
+    repeated ProtoWord words = 4;
+    repeated int32 totalKnownWordIds = 5;
+    repeated int32 currentKnownWordIds = 6;
+    int32 currentPage = 7;
+    int32 totalElapsedTimeSeconds = 8;
+    int32 currentElapsedTimeSeconds = 9;
+    int32 totalWordSize = 10;
+    int32 totalAppearanceCount = 11;
+    // 라운드별 누적 진행률(%). 개수가 곧 완료한 라운드 수라, 복구 후 그래프의 회차 눈금도 이 값으로 이어진다.
+    repeated int32 roundProgresses = 12;
+}

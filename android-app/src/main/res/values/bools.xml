@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 화면 시안이 세로(393x852) 기준이라 폰에서는 세로로 고정한다. 태블릿(sw600dp)은 회전을 허용한다. -->
+    <bool name="is_portrait_only">true</bool>
+</resources>

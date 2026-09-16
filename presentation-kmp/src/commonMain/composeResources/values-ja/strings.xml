@@ -1,0 +1,253 @@
+<resources>
+    <string name="study_status_completed">%1$d個完了</string>
+    <string name="study_status_remaining">残り%1$d個</string>
+
+    <string name="jlpt_level_n1">N1</string>
+    <string name="jlpt_level_n2">N2</string>
+    <string name="jlpt_level_n3">N3</string>
+    <string name="jlpt_level_n4">N4</string>
+    <string name="jlpt_level_n5">N5</string>
+
+    <!-- JLPT Level Subtitles -->
+    <string name="jlpt_level_n1_subtitle">最高レベルの日本語能力</string>
+    <string name="jlpt_level_n2_subtitle">日常的な場面の日本語</string>
+    <string name="jlpt_level_n3_subtitle">基本的な日本語の理解</string>
+    <string name="jlpt_level_n4_subtitle">基礎的な日本語能力</string>
+    <string name="jlpt_level_n5_subtitle">入門レベルの日本語</string>
+
+    <string name="study_word_accuracy">正答率: %1$d%</string>
+    <string name="study_word_accuracy_none">NEW!</string>
+    <string name="study_hint_meaning">意味を見る</string>
+
+    <!-- Study Screen (mollu redesign) -->
+    <string name="study_chapter_title">%1$d章</string>
+    <string name="study_meaning_hide">意味を隠す</string>
+    <string name="study_help">ヘルプ</string>
+    <string name="study_help_close">ヘルプを閉じる</string>
+    <string name="study_detail">詳しい解説</string>
+    <string name="study_swipe_guide_known">知っている単語は\n左へ</string>
+    <string name="study_swipe_guide_unknown">知らない単語は\n右へ</string>
+    <string name="study_ad_zero_label">AD</string>
+    <string name="study_example_show">例文を見る</string>
+    <string name="study_progress_remaining_label">進捗</string>
+    <string name="study_settings_label">設定</string>
+    <string name="study_chart_time_label">時間</string>
+    <string name="study_chart_round_label">ラウンド</string>
+
+    <string name="round_completion_title">ラウンド完了！</string>
+    <string name="round_completion_subtitle">すべての単語を一度ずつ確認しました</string>
+    <string name="round_completion_completed_words">完了した単語</string>
+    <string name="round_completion_remaining_words">残りの単語</string>
+    <string name="round_completion_count_format">%1$d個</string>
+    <string name="round_completion_shuffle_continue">シャッフルして続ける</string>
+
+    <string name="session_statistics_total_time">総学習時間</string>
+    <string name="session_statistics_completed_words">完了した単語</string>
+    <string name="session_statistics_accuracy">正答率</string>
+    <string name="session_statistics_words_count">%1$d個</string>
+    <string name="session_statistics_accuracy_percentage">%1$d%</string>
+
+    <string name="session_completion_all_done">すべての単語を学習し終えました</string>
+    <string name="session_completion_chapter_done">%1$d章 完了</string>
+    <string name="session_completion_finish">学習を終了する</string>
+
+    <string name="exit_session_title">少し休んでも大丈夫ですよ！</string>
+    <string name="exit_session_description">学習内容は自動的に保存されます</string>
+    <string name="exit_session_confirm">学習を終了する</string>
+    <string name="exit_session_continue">学習を続ける</string>
+    <string name="exit_session_chapter_format">JLPT %1$s / %2$d章</string>
+    <string name="exit_session_progress_format">学習の進捗 - %1$s</string>
+
+    <!-- Session Card Strings -->
+    <string name="session_card_random">ランダム %1$d個</string>
+    <string name="session_card_low_accuracy">苦手な単語 %1$d個</string>
+    <string name="session_card_word_range">単語 %1$d-%2$d番</string>
+    <string name="session_card_status_completed">完了</string>
+    <string name="session_card_status_in_progress">学習中</string>
+    <string name="session_card_status_not_started">未学習</string>
+    <string name="session_card_progress_label">学習の進捗</string>
+    <string name="session_card_completion_count">回数</string>
+    <string name="session_card_accuracy">正答率</string>
+    <string name="session_card_elapsed_time">所要時間</string>
+    <string name="session_card_progress_percentage">%1$d%</string>
+    <string name="session_card_no_data">-</string>
+
+    <!-- Session Selection (chapter/stack) Strings -->
+    <string name="session_selection_title">単語学習</string>
+    <string name="session_selection_chapter_title">チャプター %1$d</string>
+    <string name="session_selection_chapter_total">全 %1$d 章</string>
+    <string name="session_selection_card_title">%1$d章</string>
+    <string name="session_selection_collapse">折りたたむ</string>
+
+    <!-- Study Statistic Card Strings -->
+    <string name="study_statistic_card_total_progress">学習の進捗</string>
+    <string name="study_statistic_card_progress_remaining">目標まであと%1$d%です！</string>
+    <string name="study_statistic_card_average_daily">1日平均の学習</string>
+    <string name="study_statistic_card_time_format_hours_with_point">%.1f時間</string>
+    <string name="study_statistic_card_time_format_hours">%1$d時間</string>
+    <string name="study_statistic_card_time_format_minutes">%1$d分</string>
+
+    <!-- Level Page Card Strings -->
+    <string name="level_page_card_total_words">単語</string>
+    <string name="level_page_card_total_sessions">章</string>
+    <string name="level_page_card_study_progress">進捗</string>
+
+    <!-- Current Level Section Strings -->
+    <string name="current_level_section_title">現在学習中</string>
+    <string name="level_selection_title">レベル選択</string>
+    <string name="level_selection_confirm">学習を始める</string>
+
+    <!-- AdZero Dialog -->
+    <string name="adzero_dialog_title">邪魔されない学習</string>
+    <string name="adzero_dialog_subtitle">広告なしで学習に集中しましょう</string>
+    <string name="adzero_timer_label">広告非表示の残り時間</string>
+    <string name="adzero_timer_max_info">最大48時間まで延長可能</string>
+    <string name="adzero_description">短い動画を見て\n24時間広告なしで学習しましょう</string>
+    <string name="adzero_action_button">動画を見て24時間集中する</string>
+    <string name="adzero_action_button_loading">広告を準備中…</string>
+    <string name="adzero_cancel_button">今はスキップ</string>
+    <string name="adzero_time_format_hours_minutes">%1$d時間 %2$d分</string>
+    <string name="adzero_time_format_hours">%1$d時間</string>
+    <string name="adzero_time_format_minutes">%1$d分</string>
+    <string name="adzero_reward_success">広告を非表示にしました！今日も頑張りましょう！</string>
+    <string name="adzero_load_failed">広告を読み込めませんでした。インターネット接続を確認してください</string>
+
+    <string name="admob_interstitial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_rewarded_ad_id">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="admob_native_ad_id">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="admob_ios_interstitial_ad_id">ca-app-pub-3940256099942544/4411468910</string>
+    <string name="admob_ios_rewarded_ad_id">ca-app-pub-3940256099942544/1712485313</string>
+    <string name="admob_ios_native_ad_id">ca-app-pub-3940256099942544/3986624511</string>
+
+    <!-- Exit App BottomSheet -->
+    <string name="exit_app_bottom_sheet_title">今日はここまでにしますか？</string>
+    <string name="exit_app_bottom_sheet_subtitle">学習内容は自動的に保存されます</string>
+    <string name="exit_app_bottom_sheet_confirm">アプリを終了する</string>
+
+    <!-- Ad Labels -->
+    <string name="ad_attribution_label">AD</string>
+    <string name="ad_action_label">詳しく見る</string>
+
+    <string name="copy_to_clip_board_fail">クリップボードにコピーできませんでした！どうして…！</string>
+    <string name="copy_to_clip_board_success">クリップボードにコピーしました</string>
+
+    <!-- Session Progress Warning Dialog -->
+    <string name="session_progress_warning_title">進行中の学習があります</string>
+    <string name="session_progress_warning_subtitle">新しい学習を始めると\n以前の学習の進捗が削除されます</string>
+    <string name="session_progress_warning_info">JLPT %1$s / チャプター %2$d - %3$d章</string>
+    <string name="session_progress_warning_progress">学習の進捗 - %1$d%</string>
+    <string name="session_progress_warning_start">始める</string>
+    <string name="session_progress_warning_cancel">戻る</string>
+
+    <string name="splash_stage_checking">Checking</string>
+    <string name="splash_stage_readings">発音辞書</string>
+    <string name="splash_stage_words">単語帳</string>
+    <string name="splash_stage_examples">例文</string>
+    <string name="splash_stage_kanji">漢字辞書</string>
+
+    <string name="splash_sync_checking">学習データを確認しています…</string>
+    <string name="splash_sync_readings_initialize">発音辞書をダウンロードしています…</string>
+    <string name="splash_sync_readings_update">発音辞書を更新しています…</string>
+    <string name="splash_sync_words_initialize">レベル別の単語帳をダウンロードしています… (%1$d/%2$d)</string>
+    <string name="splash_sync_words_update">単語帳を最新版に更新しています… (%1$d/%2$d)</string>
+    <string name="splash_sync_examples_initialize">例文をダウンロードしています… (%1$d/%2$d)</string>
+    <string name="splash_sync_examples_update">例文を更新しています… (%1$d/%2$d)</string>
+    <string name="splash_sync_kanji_initialize">漢字辞書をダウンロードしています…</string>
+    <string name="splash_sync_kanji_update">漢字辞書を更新しています…</string>
+
+    <!-- Retry Screen -->
+    <string name="retry_screen_title">問題が発生しました！</string>
+    <string name="retry_screen_description">データを取得できませんでした。\nインターネット接続を確認してもう一度お試しください</string>
+    <string name="retry_screen_retry_button">再試行</string>
+
+    <string name="settings_inquiry">お問い合わせ</string>
+    <string name="setting_opensource">オープンソースライセンス</string>
+    <string name="settings_privacy_policy">プライバシーポリシー</string>
+    <string name="settings_version">アプリバージョン</string>
+
+    <!-- Setting Screen (mollu redesign) -->
+    <string name="setting_title">設定</string>
+    <string name="setting_study_notification">学習の通知</string>
+    <string name="setting_notification_time">通知時間</string>
+    <string name="setting_notification_time_am">午前</string>
+    <string name="setting_notification_time_pm">午後</string>
+    <string name="setting_notification_time_format">%1$s %2$d:%3$s</string>
+    <string name="setting_japanese_language">アプリの言語を日本語に</string>
+    <string name="setting_japanese_language_description">アプリ内の表示言語を日本語に変更します。\nより高度な日本語学習をしたい方におすすめです。</string>
+    <string name="setting_app_info">アプリ情報</string>
+    <string name="setting_time_picker_confirm">確認</string>
+    <string name="setting_time_picker_cancel">キャンセル</string>
+
+    <string name="inquiry_model">Model: %1$s</string>
+    <string name="inquiry_os_version">OS Version: %1$s</string>
+    <string name="inquiry_email">molludev@gmail.com</string>
+    <string name="setting_no_email_app">メールアプリがインストールされていません</string>
+    <string name="setting_no_browser_app">ブラウザアプリがインストールされていません</string>
+    <string name="privacy_policy_url">https://savory-opal-f3c.notion.site/25e75017b71f80229360c57f299cd388</string>
+
+    <!-- TTS Warning -->
+    <string name="tts_warning_title">音声データが必要です！</string>
+    <string name="tts_warning_description">発音を聞くには日本語の音声データが必要です。\nダウンロードしてからもう一度お試しください。</string>
+    <string name="tts_warning_confirm">ダウンロード</string>
+    <string name="tts_warning_cancel">あとで</string>
+    <string name="tts_install_guide_ios">設定 > アクセシビリティ > 読み上げコンテンツ で日本語の音声をダウンロードしてください</string>
+    <string name="tts_install_guide_android">設定 > システム > 言語と入力 > 音声出力 で日本語の音声をダウンロードしてください</string>
+    <string name="tts_volume_muted">音量が0のため発音が聞こえません</string>
+
+    <!-- Test Session Card Strings -->
+    <string name="test_session_card_title">%1$d章</string>
+    <string name="test_chapter_title">チャプター %1$d</string>
+    <string name="test_chapter_total_sessions">全 %1$d 章</string>
+
+    <!-- Word Detail Strings -->
+    <string name="word_detail_title">単語の詳細</string>
+    <string name="word_detail_example_number">例文 %1$d</string>
+    <string name="word_detail_kanji_korean_label">韓国読み</string>
+    <string name="word_detail_kanji_kun_label">訓読み</string>
+    <string name="word_detail_kanji_on_label">音読み</string>
+    <string name="word_detail_back_content_description">戻る</string>
+    <string name="word_detail_tts_content_description">発音を聞く</string>
+
+    <!-- Search Strings -->
+    <string name="search_title">単語を探す</string>
+    <string name="search_placeholder">単語検索</string>
+    <string name="search_total_count">全 %1$d単語</string>
+    <string name="search_filter">フィルター</string>
+    <string name="search_sort">並び替え</string>
+    <string name="search_ascending">昇順</string>
+    <string name="search_descending">降順</string>
+    <string name="search_reset">リセット</string>
+    <string name="search_filter_apply">フィルター適用</string>
+    <string name="search_sort_apply">並び替え適用</string>
+    <string name="search_level_label">レベル</string>
+    <string name="search_script_label">表記</string>
+    <string name="search_select_all">すべて選択</string>
+    <string name="search_script_hiragana">ひらがな</string>
+    <string name="search_script_katakana">カタカナ</string>
+    <string name="search_script_kanji">漢字の単語</string>
+    <string name="search_sort_word_number">単語番号順</string>
+    <string name="search_sort_dictionary">辞書順</string>
+    <string name="search_sort_accuracy">正答率順</string>
+    <string name="search_empty_result">検索結果なし</string>
+
+    <!-- Bottom Tab Strings -->
+    <string name="bottom_tab_home">ホーム</string>
+    <string name="bottom_tab_study">単語学習</string>
+    <string name="bottom_tab_search">単語検索</string>
+
+    <!-- Home Strings -->
+    <string name="home_title">JLPT %1$s</string>
+    <string name="home_today_example_title">今日の例文</string>
+    <string name="home_continue_study_title">学習を続ける</string>
+    <string name="home_study_overview_title">学習状況</string>
+    <string name="home_overview_streak_days">連続学習日数</string>
+    <string name="home_overview_total_attendance">総学習日数</string>
+    <string name="home_overview_total_study_time">総学習時間</string>
+    <string name="home_overview_studied_words">学習した単語</string>
+    <string name="home_overview_total_progress">学習の進捗</string>
+    <string name="home_overview_unit_days">日</string>
+    <string name="home_overview_unit_hours">時間</string>
+    <string name="home_overview_unit_minutes">分</string>
+    <string name="home_overview_unit_words">個</string>
+    <string name="home_overview_unit_percent">%</string>
+</resources>

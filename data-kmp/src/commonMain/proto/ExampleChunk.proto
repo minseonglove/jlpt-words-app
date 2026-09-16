@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package com.minseonglove.jlptwords.proto;
+
+// examples_{level} 청크 문서의 data(bytes) 필드 내용.
+// 직렬화 결과를 raw deflate(RFC 1951, zlib 헤더 없음)로 압축해 저장한다.
+// 인코더는 scripts/firestore_upload/example_blob.py — protoc 없이 손으로 인코딩하므로
+// 스키마를 바꾸면 인코더와 ExampleChunkCodecTest 의 골든 blob 도 함께 갱신해야 한다.
+// 필드 번호는 불변, 새 필드는 새 번호로만 추가한다.
+message ExampleChunk {
+    repeated ChunkWordExamples words = 1;
+}
+
+message ChunkWordExamples {
+    string kanji = 1;
+    repeated ChunkExample examples = 2;
+}
+
+message ChunkExample {
+    string japanese = 1;
+    string korean = 2;
+    repeated ChunkToken tokens = 3;
+    repeated ChunkRuby furigana = 4;
+}
+
+message ChunkToken {
+    string surface = 1;
+    string meaning = 2;
+}
+
+// 예문 루비 세그먼트 — text 연결이 (마커 제거) 문장 전체가 되도록 생성기가 보장한다.
+message ChunkRuby {
+    string text = 1;
+    string reading = 2;  // 비어 있으면 루비 없는 구간
+}

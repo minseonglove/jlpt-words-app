@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 문의하기(메일) 인텐트를 조회할 수 있도록 선언한다. targetSdk 30+ 는 이 선언이 없으면
+         메일 앱이 패키지 조회 결과에서 걸러진다. 웹 링크용 VIEW/https 는 광고 SDK 매니페스트가
+         이미 병합해 준다. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
+    </queries>
+
+    <application
+        android:name="com.minseonglove.jlptwords.JlptWordsApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JLPTWords">
+        <!-- 폰은 세로 고정. 태블릿은 MainActivity 가 이 값을 UNSPECIFIED 로 되돌려 회전을 허용한다.
+             (매니페스트로 먼저 고정해야 실행 직후 가로로 잠깐 그려지는 것을 막을 수 있다.) -->
+        <activity
+            android:name="com.minseonglove.jlptwords.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.JLPTWords">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+    </application>
+</manifest>

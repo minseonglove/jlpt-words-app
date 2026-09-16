@@ -1,0 +1,66 @@
+# 순환복잡도 계측 전용 detekt 설정.
+#
+# 임계값을 넘는 함수만 경고하는 대신 threshold 를 1(= 모든 함수)로 두어
+# 전 함수의 복잡도를 리포트로 뽑는다. 분포와 추이를 데이터로 보기 위한 설정이므로
+# 빌드는 세우지 않고(ignoreFailures), 집계는 scripts/complexity/report.py 가 담당한다.
+
+# 전 함수를 계측하므로 콘솔에 위반을 찍으면 900줄이 넘는다.
+# 결과는 XML 리포트로만 내보내고 집계는 report.py 가 한다.
+console-reports:
+  active: true
+  exclude:
+    - 'FindingsReport'
+    - 'FileBasedFindingsReport'
+    - 'LiteFindingsReport'
+    - 'ComplexityReport'
+    - 'ProjectStatisticsReport'
+
+complexity:
+  active: true
+
+  CyclomaticComplexMethod:
+    active: true
+    # 1 = 모든 함수가 리포트에 남는다 (CC 의 최솟값이 1)
+    threshold: 1
+    excludes: &testSources
+      - '**/commonTest/**'
+      - '**/androidTest/**'
+      - '**/androidHostTest/**'
+      - '**/iosTest/**'
+    # when 절은 분기마다 세는 McCabe 정의를 따른다
+    ignoreSingleWhenExpression: false
+    ignoreSimpleWhenEntries: false
+    ignoreNestingFunctions: false
+    # detekt 기본값은 also/apply/let/run/with/use 같은 스코프 함수도 분기로 세지만,
+    # 이들은 제어 흐름을 나누지 않으므로 McCabe 정의에서 제외한다.
+    # 반복을 만드는 forEach 만 남긴다.
+    nestingFunctions:
+      - 'forEach'
+
+  # 중첩 깊이에 가중치를 주는 보조 지표. 같은 CC 라도 중첩이 깊으면 더 크게 나온다.
+  CognitiveComplexMethod:
+    active: true
+    threshold: 1
+    excludes: *testSources
+
+  # 아래는 리팩토링 대상을 고를 때 함께 보는 신호들 (기본 임계값 유지).
+  # LongMethod 는 랭킹의 '줄' 컬럼, NestedBlockDepth 는 '*' 마커로 나온다.
+  # ComplexCondition 은 조건식 단위라 함수에 귀속되지 않아 건수만 보고된다.
+  LongMethod:
+    active: true
+    threshold: 60
+    excludes: *testSources
+  NestedBlockDepth:
+    active: true
+    threshold: 4
+    excludes: *testSources
+  ComplexCondition:
+    active: true
+    threshold: 4
+    excludes: *testSources
+  LongParameterList:
+    active: false
+  LargeClass:
+    active: false
+  TooManyFunctions:
+    active: false

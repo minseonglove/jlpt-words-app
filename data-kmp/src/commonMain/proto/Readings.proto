@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.minseonglove.jlptwords.proto;
+
+// readings/all 문서의 data(bytes) 필드 내용 — 표면형→요미가나 전역 사전.
+// 직렬화 결과를 raw deflate(RFC 1951, zlib 헤더 없음)로 압축해 저장한다.
+// 인코더는 scripts/firestore_upload/example_blob.py — 스키마를 바꾸면 인코더와
+// ReadingsBlobCodecTest 의 골든 blob 도 함께 갱신해야 한다.
+// 필드 번호는 불변, 새 필드는 새 번호로만 추가한다.
+message ReadingsBlob {
+    repeated ReadingEntry entries = 1;
+}
+
+message ReadingEntry {
+    string surface = 1;
+    string reading = 2;
+}
